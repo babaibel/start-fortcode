@@ -1,20 +1,21 @@
 doctype html
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Fortcode project name
+	include base/head.pug
+	body
+		.page
+			.page-inner
+				= '\n'
 
-body
-	.page
-		.page-inner
-			|
-			include base/header.pug
-			|
-			|
-			.page-body
+				include base/header.pug
+				= '\n'
 
-			include base/footer.pug
+				.page-body
+				= '\n'
 
-		include base/popups.pug
+				include base/footer.pug
+			= '\n'
 
-	include base/scripts.pug
+			include base/popups.pug
+		= '\n'
+
+		include base/scripts.pug

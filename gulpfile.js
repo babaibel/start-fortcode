@@ -21,7 +21,7 @@ gulp.task('stylus', function () { // Создаем таск Sass
 });
 
 gulp.task('pug', function () { // Создаем таск Sass
-	return gulp.src('app/_html/**/*.pug') // Берем источник
+	return gulp.src(['app/_html/**/*.pug','!app/_html/base/*.pug']) // Берем источник
 		.pipe(pug({pretty: true})) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(gulp.dest('app/_html')) // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
